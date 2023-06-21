@@ -2,13 +2,14 @@ import React, {useState} from 'react';
 
 type PropsType = {
     onChange: (switchOn: boolean) => void
+    defaultOn?: boolean
 }
 
 
 
 const OnOff2 = (props: PropsType) => {
 
-    const [on, setOn] = useState(true)
+    const [on, setOn] = useState(props.defaultOn ? props.defaultOn : false)
 
     const onClickDivHandler = () => {
         setOn(!on)

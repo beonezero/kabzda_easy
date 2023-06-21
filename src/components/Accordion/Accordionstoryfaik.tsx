@@ -1,10 +1,11 @@
 import React, {useState} from "react";
-import OnOff2 from "./OnOff2";
+import Accordion from "./Accordion";
 
-export const onMode = () => <OnOff2 onChange={x => true} />
-export const offMode = () => <OnOff2 onChange={x=> false} />
+export const CollapsedMode = () => <Accordion title={"Menu"} collapsed={true} setCollapsed={()=>{}} items={[]} onClick={() => {}}/>
+export const UncollapsedMode = () => <Accordion title={"Users"} collapsed={false} setCollapsed={()=>{}} items={[]} onClick={() => {}}/>
 
-export const ModeChanging = () => {
-    const [value, setValue] = useState<boolean>(true)
-    return <OnOff2 onChange={setValue}/>
+export const ModeChangingAccordion = () => {
+    const [collapsed, setCollapsed] = useState<boolean>(false)
+    return <Accordion title={"Users"} collapsed={collapsed} setCollapsed={setCollapsed} items={[]} onClick={() => {}}/>
+
 }

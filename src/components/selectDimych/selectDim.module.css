@@ -1,29 +1,29 @@
-import React from 'react';
-
-type ItemType = {
-    title: string
-    value: string
+.select {
+    margin-top: 30px;
+    position: relative;
 }
 
-type SelectPropsType = {
-    value?: string
-    onChange?: (value: any) => void
-    items: ItemType[]
+.select .main {
+    border: 1px solid black;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+}
+
+.items {
+    border: 1px solid black;
+    position: absolute;
+    padding: 10px;
+    top: 40px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
 
 }
-export const SelectDim = (props: SelectPropsType) => {
-    const selectedItem = props.items.find(i => i.value === props.value)
-    return (
-        <div>
-            <select>
-                <option value="">Minsk</option>
-                <option value="">Bobruisk</option>
-                <option value="">Vitebsk</option>
-                <option value="">Grodno</option>
-            </select>
-            
-            <h3>{selectedItem && selectedItem.title}</h3>
-            {props.items.map(i => <div key={i.value}>{i.title}</div>)}
-        </div>
-    );
-};
+
+.item.selected {
+    background-color: blue;
+    color: white;
+}

@@ -1,18 +1,10 @@
 import React, {useState} from "react";
-import {Rating, RatingValueType} from "./Rating";
+import {UnControlledRating} from "../UncontrolledRating/UnControlledRating";
+import {RatingValueType} from "../Rating/Rating";
 
-// export default {
-//     title: "Rating stories",
-//     component: Rating
-// }
-
-export const EmptyRating= () => <Rating value={0} onClick={x=>x} />
-export const Rating1 = () => <Rating value={1} onClick={x=>x} />
-export const Rating2 = () => <Rating value={2} onClick={x=>x} />
-export const Rating3 = () => <Rating value={3} onClick={x=>x} />
-export const Rating4 = () => <Rating value={4} onClick={x=>x} />
-export const Rating5 = () => <Rating value={5} onClick={x=>x} />
-export const RatingChanging = () => {
-    const [rating, setRating] = useState<RatingValueType>(3)
-    return <Rating value={rating} onClick={setRating}/>
-}
+export const EmptyUnControlledRating= () => <UnControlledRating defaultValue={0} setValue={()=>{}} />
+export const UnControlledRating1 = () => <UnControlledRating defaultValue={1} setValue={()=>{}} />
+export const UnControlledRating2 = () => <UnControlledRating defaultValue={2} setValue={()=>{}} />
+export const UnControlledRating3 = () => <UnControlledRating defaultValue={3} setValue={()=>{}} />
+export const UnControlledRating4 = () => <UnControlledRating defaultValue={4} setValue={()=>{}} />
+export const UnControlledRating5 = () => <UnControlledRating defaultValue={5} setValue={()=>{}} />

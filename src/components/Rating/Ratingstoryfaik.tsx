@@ -1,7 +1,12 @@
 import React, {useState} from "react";
 import {Rating, RatingValueType} from "./Rating";
 
-export const EmptyRating = () => <Rating value={0} onClick={x=>x} />
+// export default {
+//     title: "Rating stories",
+//     component: Rating
+// }
+
+export const EmptyRating= () => <Rating value={0} onClick={x=>x} />
 export const Rating1 = () => <Rating value={1} onClick={x=>x} />
 export const Rating2 = () => <Rating value={2} onClick={x=>x} />
 export const Rating3 = () => <Rating value={3} onClick={x=>x} />

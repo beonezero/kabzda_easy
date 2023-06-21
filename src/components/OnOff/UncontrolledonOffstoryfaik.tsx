@@ -1,10 +1,8 @@
 import React, {useState} from "react";
 import OnOff2 from "./OnOff2";
 
-export const OnMode = () => <OnOff2 onChange={x => true} />
-export const OffMode = () => <OnOff2 onChange={x=> false} />
+export const OnModeUncontrolled = () => <OnOff2 defaultOn={true} onChange={() => {}} />
+export const OffModeUncontrolled = () => <OnOff2 defaultOn={false} onChange={() => {}} />
 
-export const ModeChanging = () => {
-    const [value, setValue] = useState<boolean>(true)
-    return <OnOff2 onChange={setValue}/>
-}
+export const BugMode = () => <div>Unsync when change defaultValue when already rendering </div>
+
