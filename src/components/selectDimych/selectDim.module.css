@@ -1,0 +1,29 @@
+import React from 'react';
+
+type ItemType = {
+    title: string
+    value: string
+}
+
+type SelectPropsType = {
+    value?: string
+    onChange?: (value: any) => void
+    items: ItemType[]
+
+}
+export const SelectDim = (props: SelectPropsType) => {
+    const selectedItem = props.items.find(i => i.value === props.value)
+    return (
+        <div>
+            <select>
+                <option value="">Minsk</option>
+                <option value="">Bobruisk</option>
+                <option value="">Vitebsk</option>
+                <option value="">Grodno</option>
+            </select>
+            
+            <h3>{selectedItem && selectedItem.title}</h3>
+            {props.items.map(i => <div key={i.value}>{i.title}</div>)}
+        </div>
+    );
+};
