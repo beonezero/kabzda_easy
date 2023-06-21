@@ -38,6 +38,7 @@ import {
 import Select from "./components/Select/Select";
 import {SelectDim} from "./components/selectDimych/selectDim";
 import {Example1} from "./components/ReactMemo";
+import {Example2} from "./components/UseMemo";
 
 type PageTitlePropsType = {
     title: string
@@ -146,6 +147,10 @@ function App() {
             <hr/>
             <hr/>
             <Example1/>
+            <hr/>
+            <hr/>
+            <hr/>
+            <Example2/>
         </div>
     )
 }
