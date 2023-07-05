@@ -40,6 +40,8 @@ import {SelectDim} from "./components/selectDimych/selectDim";
 import {Example1} from "./components/ReactMemo";
 import {DifficultCountingExample, HelpsToReactMemo} from "./components/UseMemo";
 import {LikeUseCallBack} from "./components/UseCallback";
+import UseState from "./stories/UseState";
+import UseEffect from "./stories/UseEffect";
 
 type PageTitlePropsType = {
     title: string
@@ -158,6 +160,10 @@ function App() {
             <HelpsToReactMemo/>
             <hr/>
             <LikeUseCallBack/>
+            <hr/>
+            <UseState/>
+            <hr/>
+            <UseEffect/>
         </div>
     )
 }
